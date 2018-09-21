@@ -1,4 +1,11 @@
 const req = require("request");
+const express = require('express')
+const app = express()
+const port = process.env.PORT || 5000
+
+app.get('/', (req, res) => res.send('Hello World!'))
+
+app.listen(port, () => console.log(`Example app listening on port ${PORT}!`))
 
 let options = {
     url: 'https://ogrenci.gazi.edu.tr/ogrenci/htmlNavigate.php?ReqID=DERS_KAYIT_EKR&myID=ed3bc00396ab8b013deb6e2eec810d03',
